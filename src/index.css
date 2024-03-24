@@ -148,7 +148,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .home-hero {
-    background: url(./img/home-page/home-hero.jpg);
+    background: url(../img/home-page/home-hero.jpg);
     padding: 300px 0;
     > .container {
         > div {
@@ -224,7 +224,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .upcoming-movies {
     padding: 100px 0;
-    background: url(./img/elements/top-rated-bg.jpg);
+    background: url(../img/elements/top-rated-bg.jpg);
     background-size: cover;
     > .container {
         > header {
@@ -323,7 +323,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .home-our-services {
     padding: 100px 0;
-    background: url(./img/elements/our-services-bg.jpg);
+    background: url(../img/elements/our-services-bg.jpg);
     background-size: cover;
     > .container {
         display: flex;
@@ -404,7 +404,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .home-top-rated {
     padding: 100px 0;
-    background: url(./img/elements/top-rated-bg.jpg);
+    background: url(../img/elements/top-rated-bg.jpg);
     background-size: cover;
     > .container {
         display: flex;
@@ -445,7 +445,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .home-live-movie {
     position: relative;
-    background: url(./img/elements/live-bg.jpg);
+    background: url(../img/elements/live-bg.jpg);
     padding: 100px 0;
     > .container {
         display: flex;
@@ -496,7 +496,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .home-world-best {
     padding: 100px 0;
-    background: url(./img/elements/world-best-bg.jpg);
+    background: url(../img/elements/world-best-bg.jpg);
     background-size: cover;
     > .container {
         display: flex;
@@ -521,7 +521,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .home-trial {
     padding: 50px 0;
-    background: url(./img/elements/trial-bg.jpg);
+    background: url(../img/elements/trial-bg.jpg);
     background-size: cover;
     > .container {
         display: flex;
@@ -570,12 +570,8 @@ p, h1, h2, h3, h4, h5, h6 {
     }
 }
 
-.footer {
-
-}
-
 .footer-top {
-    background: url(./img/elements/footer-bg.jpg);
+    background: url(../img/elements/footer-bg.jpg);
     background-size: cover;
     padding: 55px 0;
     > .container {
