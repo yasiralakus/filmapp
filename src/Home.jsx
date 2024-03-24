@@ -3,10 +3,12 @@ import Header from "./Components/Header";
 import HomePageSliderMovies from "./Components/HomePageSliderMovies";
 import HomePageSliderTV from "./Components/HomePageSliderTV";
 import HomePageSliderAnime from "./Components/HomePageSliderAnime";
+import Footer from "./Components/Footer";
 
 export default function Home() {
 
     const [upcoming, setUpcoming] = useState(1);
+    const [topRated, setTopRated] = useState(1);
 
 
     return (
@@ -111,6 +113,458 @@ export default function Home() {
                 </div>
 
             </div>
+
+            <div className="home-top-rated">
+
+                <div className="container">
+
+                    <h1>Top Rated Movies</h1>
+
+                    <header>
+                        <button style={topRated === 1 ? {color: '#E4D804'} : {}} onClick={() => (setTopRated(1))}>TV SHOWS</button>
+                        <button style={topRated === 2 ? {color: '#E4D804'} : {}} onClick={() => (setTopRated(2))}>MOVIES</button>
+                        <button style={topRated === 3 ? {color: '#E4D804'} : {}} onClick={() => (setTopRated(3))}>DOCUMENTARY</button>
+                        <button style={topRated === 4 ? {color: '#E4D804'} : {}} onClick={() => (setTopRated(4))}>SPORTS</button>
+                    </header>
+
+                    {topRated === 1 &&
+                    <div className="fade-in">
+                        <div className="card">
+                            <img src="./img/home-page/img01.jpg" alt="" />
+                            <header>
+                                <h1>Women's Day</h1>
+                                <p>2021</p>
+                            </header>
+                            <main>
+                                <span>HD</span>
+                                <div>
+                                    <p><i class="fa-regular fa-clock"></i> 128 min</p>
+                                    <p><i class="fa-solid fa-thumbs-up"></i> 3.5</p>
+                                </div>
+                            </main>
+                        </div>
+                        <div className="card">
+                            <img src="./img/home-page/img02.jpg" alt="" />
+                            <header>
+                                <h1>The Perfect Match</h1>
+                                <p>2021</p>
+                            </header>
+                            <main>
+                                <span>HD</span>
+                                <div>
+                                    <p><i class="fa-regular fa-clock"></i> 128 min</p>
+                                    <p><i class="fa-solid fa-thumbs-up"></i> 3.5</p>
+                                </div>
+                            </main>
+                        </div>
+                        <div className="card">
+                            <img src="./img/home-page/img03.jpg" alt="" />
+                            <header>
+                                <h1>The Dog Woof</h1>
+                                <p>2021</p>
+                            </header>
+                            <main>
+                                <span>HD</span>
+                                <div>
+                                    <p><i class="fa-regular fa-clock"></i> 128 min</p>
+                                    <p><i class="fa-solid fa-thumbs-up"></i> 3.5</p>
+                                </div>
+                            </main>
+                        </div>
+                        <div className="card">
+                            <img src="./img/home-page/img04.jpg" alt="" />
+                            <header>
+                                <h1>The Easy Reach</h1>
+                                <p>2021</p>
+                            </header>
+                            <main>
+                                <span>HD</span>
+                                <div>
+                                    <p><i class="fa-regular fa-clock"></i> 128 min</p>
+                                    <p><i class="fa-solid fa-thumbs-up"></i> 3.5</p>
+                                </div>
+                            </main>
+                        </div>
+                        <div className="card">
+                            <img src="./img/home-page/img05.jpg" alt="" />
+                            <header>
+                                <h1>The Cooking</h1>
+                                <p>2021</p>
+                            </header>
+                            <main>
+                                <span>HD</span>
+                                <div>
+                                    <p><i class="fa-regular fa-clock"></i> 128 min</p>
+                                    <p><i class="fa-solid fa-thumbs-up"></i> 3.5</p>
+                                </div>
+                            </main>
+                        </div>
+                        <div className="card">
+                            <img src="./img/home-page/img06.jpg" alt="" />
+                            <header>
+                                <h1>The Hikaru</h1>
+                                <p>2021</p>
+                            </header>
+                            <main>
+                                <span>HD</span>
+                                <div>
+                                    <p><i class="fa-regular fa-clock"></i> 128 min</p>
+                                    <p><i class="fa-solid fa-thumbs-up"></i> 3.5</p>
+                                </div>
+                            </main>
+                        </div>
+                        <div className="card">
+                            <img src="./img/home-page/img07.jpg" alt="" />
+                            <header>
+                                <h1>Life Quotes</h1>
+                                <p>2021</p>
+                            </header>
+                            <main>
+                                <span>HD</span>
+                                <div>
+                                    <p><i class="fa-regular fa-clock"></i> 128 min</p>
+                                    <p><i class="fa-solid fa-thumbs-up"></i> 3.5</p>
+                                </div>
+                            </main>
+                        </div>
+                        <div className="card">
+                            <img src="./img/home-page/img08.jpg" alt="" />
+                            <header>
+                                <h1>The Beachball</h1>
+                                <p>2021</p>
+                            </header>
+                            <main>
+                                <span>HD</span>
+                                <div>
+                                    <p><i class="fa-regular fa-clock"></i> 128 min</p>
+                                    <p><i class="fa-solid fa-thumbs-up"></i> 3.5</p>
+                                </div>
+                            </main>
+                        </div>
+                    </div>
+                    }
+
+                    {topRated === 2 &&
+                    <div className="fade-in">
+                        <div className="card">
+                            <img src="./img/home-page/img02.jpg" alt="" />
+                            <header>
+                                <h1>The Perfect Match</h1>
+                                <p>2021</p>
+                            </header>
+                            <main>
+                                <span>HD</span>
+                                <div>
+                                    <p><i class="fa-regular fa-clock"></i> 128 min</p>
+                                    <p><i class="fa-solid fa-thumbs-up"></i> 3.5</p>
+                                </div>
+                            </main>
+                        </div>
+                        <div className="card">
+                            <img src="./img/home-page/img04.jpg" alt="" />
+                            <header>
+                                <h1>The Easy Reach</h1>
+                                <p>2021</p>
+                            </header>
+                            <main>
+                                <span>HD</span>
+                                <div>
+                                    <p><i class="fa-regular fa-clock"></i> 128 min</p>
+                                    <p><i class="fa-solid fa-thumbs-up"></i> 3.5</p>
+                                </div>
+                            </main>
+                        </div>
+                        <div className="card">
+                            <img src="./img/home-page/img06.jpg" alt="" />
+                            <header>
+                                <h1>The Hikaru</h1>
+                                <p>2021</p>
+                            </header>
+                            <main>
+                                <span>HD</span>
+                                <div>
+                                    <p><i class="fa-regular fa-clock"></i> 128 min</p>
+                                    <p><i class="fa-solid fa-thumbs-up"></i> 3.5</p>
+                                </div>
+                            </main>
+                        </div>
+                        <div className="card">
+                            <img src="./img/home-page/img08.jpg" alt="" />
+                            <header>
+                                <h1>The Beachball</h1>
+                                <p>2021</p>
+                            </header>
+                            <main>
+                                <span>HD</span>
+                                <div>
+                                    <p><i class="fa-regular fa-clock"></i> 128 min</p>
+                                    <p><i class="fa-solid fa-thumbs-up"></i> 3.5</p>
+                                </div>
+                            </main>
+                        </div>
+                    </div>
+                    }
+                    
+                    {topRated === 3 &&
+                    <div className="fade-in">
+                        <div className="card">
+                            <img src="./img/home-page/img01.jpg" alt="" />
+                            <header>
+                                <h1>Women's Day</h1>
+                                <p>2021</p>
+                            </header>
+                            <main>
+                                <span>HD</span>
+                                <div>
+                                    <p><i class="fa-regular fa-clock"></i> 128 min</p>
+                                    <p><i class="fa-solid fa-thumbs-up"></i> 3.5</p>
+                                </div>
+                            </main>
+                        </div>
+                        <div className="card">
+                            <img src="./img/home-page/img03.jpg" alt="" />
+                            <header>
+                                <h1>The Dog Woof</h1>
+                                <p>2021</p>
+                            </header>
+                            <main>
+                                <span>HD</span>
+                                <div>
+                                    <p><i class="fa-regular fa-clock"></i> 128 min</p>
+                                    <p><i class="fa-solid fa-thumbs-up"></i> 3.5</p>
+                                </div>
+                            </main>
+                        </div>
+                        <div className="card">
+                            <img src="./img/home-page/img05.jpg" alt="" />
+                            <header>
+                                <h1>The Cooking</h1>
+                                <p>2021</p>
+                            </header>
+                            <main>
+                                <span>HD</span>
+                                <div>
+                                    <p><i class="fa-regular fa-clock"></i> 128 min</p>
+                                    <p><i class="fa-solid fa-thumbs-up"></i> 3.5</p>
+                                </div>
+                            </main>
+                        </div>
+                        <div className="card">
+                            <img src="./img/home-page/img07.jpg" alt="" />
+                            <header>
+                                <h1>Life Quotes</h1>
+                                <p>2021</p>
+                            </header>
+                            <main>
+                                <span>HD</span>
+                                <div>
+                                    <p><i class="fa-regular fa-clock"></i> 128 min</p>
+                                    <p><i class="fa-solid fa-thumbs-up"></i> 3.5</p>
+                                </div>
+                            </main>
+                        </div>
+                    </div>
+                    }
+
+                    {topRated === 4 &&
+                    <div className="fade-in">
+                        <div className="card">
+                            <img src="./img/home-page/img02.jpg" alt="" />
+                            <header>
+                                <h1>The Perfect Match</h1>
+                                <p>2021</p>
+                            </header>
+                            <main>
+                                <span>HD</span>
+                                <div>
+                                    <p><i class="fa-regular fa-clock"></i> 128 min</p>
+                                    <p><i class="fa-solid fa-thumbs-up"></i> 3.5</p>
+                                </div>
+                            </main>
+                        </div>
+                        <div className="card">
+                            <img src="./img/home-page/img04.jpg" alt="" />
+                            <header>
+                                <h1>The Easy Reach</h1>
+                                <p>2021</p>
+                            </header>
+                            <main>
+                                <span>HD</span>
+                                <div>
+                                    <p><i class="fa-regular fa-clock"></i> 128 min</p>
+                                    <p><i class="fa-solid fa-thumbs-up"></i> 3.5</p>
+                                </div>
+                            </main>
+                        </div>
+                        <div className="card">
+                            <img src="./img/home-page/img06.jpg" alt="" />
+                            <header>
+                                <h1>The Hikaru</h1>
+                                <p>2021</p>
+                            </header>
+                            <main>
+                                <span>HD</span>
+                                <div>
+                                    <p><i class="fa-regular fa-clock"></i> 128 min</p>
+                                    <p><i class="fa-solid fa-thumbs-up"></i> 3.5</p>
+                                </div>
+                            </main>
+                        </div>
+                        <div className="card">
+                            <img src="./img/home-page/img08.jpg" alt="" />
+                            <header>
+                                <h1>The Beachball</h1>
+                                <p>2021</p>
+                            </header>
+                            <main>
+                                <span>HD</span>
+                                <div>
+                                    <p><i class="fa-regular fa-clock"></i> 128 min</p>
+                                    <p><i class="fa-solid fa-thumbs-up"></i> 3.5</p>
+                                </div>
+                            </main>
+                        </div>
+                    </div>
+                    }
+
+
+                </div>
+
+            </div>
+
+            <div className="home-live-movie">
+                <div className="container">
+
+                    <div>
+                        <h1>Live Movie & TV Shows For Friends & Family</h1>
+
+                        <p>Lorem ipsum dolor sit amet, consecetur adipiscing elseddo eiusmod There are many variations of passages of lorem Ipsum available, but the majority have suffered alteration.</p>
+
+                        <div>
+                            <h3>20K+</h3>
+                            <p>Active Customer</p>
+                        </div>
+
+                        <button><i class="fa-solid fa-play"></i> WATCH NOW</button>
+                    </div>
+
+                    <img src="./img/elements/live.png" alt="" />
+
+                </div>
+
+            </div>
+
+            <div className="home-world-best">
+
+                <div className="container">
+
+                    <h1>World Best TV Series</h1>
+
+                    <div>
+                        <div className="card">
+
+                            <img src="./img/home-page/img10.jpg" alt="" />
+                            <header>
+                                <h1>Women's Day</h1>
+                                <p>2021</p>
+                            </header>
+
+                            <main>
+
+                                <span>HD</span>
+
+                                <div>
+                                    <p><i class="fa-regular fa-clock"></i> 128 min</p>
+                                    <p><i class="fa-solid fa-thumbs-up"></i> 3.5</p>
+                                </div>
+
+                            </main>
+
+                        </div>
+                        <div className="card">
+
+                            <img src="./img/home-page/img09.jpg" alt="" />
+                            <header>
+                                <h1>The Perfect Match</h1>
+                                <p>2021</p>
+                            </header>
+
+                            <main>
+
+                                <span>HD</span>
+
+                                <div>
+                                    <p><i class="fa-regular fa-clock"></i> 128 min</p>
+                                    <p><i class="fa-solid fa-thumbs-up"></i> 3.5</p>
+                                </div>
+
+                            </main>
+
+                        </div>
+                        <div className="card">
+
+                            <img src="./img/home-page/img03.jpg" alt="" />
+                            <header>
+                                <h1>The Dog Woof</h1>
+                                <p>2021</p>
+                            </header>
+
+                            <main>
+
+                                <span>HD</span>
+
+                                <div>
+                                    <p><i class="fa-regular fa-clock"></i> 128 min</p>
+                                    <p><i class="fa-solid fa-thumbs-up"></i> 3.5</p>
+                                </div>
+
+                            </main>
+
+                        </div>
+                        <div className="card">
+
+                            <img src="./img/home-page/img04.jpg" alt="" />
+                            <header>
+                                <h1>The Easy Reach</h1>
+                                <p>2021</p>
+                            </header>
+
+                            <main>
+
+                                <span>HD</span>
+
+                                <div>
+                                    <p><i class="fa-regular fa-clock"></i> 128 min</p>
+                                    <p><i class="fa-solid fa-thumbs-up"></i> 3.5</p>
+                                </div>
+
+                            </main>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div className="home-trial">
+
+                <div className="container">
+
+                    <div>
+                        <h1>TRIAL START FIRST 30 DAYS.</h1>
+                        <p>Enter your email to create or restart your membership.</p>
+                    </div>
+                    <form>
+                        <input type="text" placeholder="Enter your email"/>
+                        <button>GET STARTED</button>
+                    </form>
+
+                </div>
+
+            </div>
+
+            <Footer />
 
         </div>
     )
