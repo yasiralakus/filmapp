@@ -9,32 +9,33 @@ export default function Home() {
 
     const [upcoming, setUpcoming] = useState(1);
     const [topRated, setTopRated] = useState(1);
-
+    const [languageEnglish, setLanguageEnglish] = useState(true)
+    console.log(languageEnglish)
 
     return (
         <div className="full-page">
-
 
             <div className="home-hero">
 
                 <div className="container">
 
-                    <Header />
+                    <Header setLanguageEnglish={setLanguageEnglish} languageEnglish={languageEnglish}/>
 
                     <div>
                         <h3>Movflx</h3>
 
-                        <h1>Unlimited <span>Movie</span>, TVs Shows, & More.</h1>
+                        {languageEnglish === true ? <h1>Unlimited <span>Movie</span>, TVs Shows, & More.</h1> :
+                        <h1>Sınırsız <span>Film</span>, TV Şovları, ve Daha Fazlası.</h1>}
 
                         <div>
                             <span>PG 18</span>
                             <span style={{backgroundColor: 'transparent', color: '#fff', border: '1px solid #fff'}}>HD</span>
-                            <p>Romance, Drama</p>
+                            <p>{languageEnglish === true ? 'Romance, Drama' : 'Romantizm, Dram'}</p>
                             <p><i class="fa-solid fa-calendar-days"></i> 2021</p>
-                            <p><i class="fa-regular fa-clock"></i> 128 min</p>
+                            <p><i class="fa-regular fa-clock"></i> 128 {languageEnglish === true ? 'min' : 'dk'}</p>
                         </div>
 
-                        <button><i class="fa-solid fa-play"></i> WATCH NOW</button>
+                        <button><i class="fa-solid fa-play"></i> {languageEnglish === true ? 'WATCH NOW' : 'ŞİMDİ İZLE'}</button>
                     </div>
 
 
@@ -48,12 +49,12 @@ export default function Home() {
 
                     <header>
 
-                        <h1>Upcoming Movies</h1>
+                        <h1>{languageEnglish === true ? 'Upcoming Movies' : 'Eklenecek Filmler'}</h1>
 
                         <div>
 
-                            <button className={upcoming === 1 ? 'selected' : {}} onClick={() => (setUpcoming(1))}>TV Shows</button>
-                            <button className={upcoming === 2 ? 'selected' : {}} onClick={() => (setUpcoming(2))}>Movies</button>
+                            <button className={upcoming === 1 ? 'selected' : {}} onClick={() => (setUpcoming(1))}>{languageEnglish === true ? 'TV Shows' : 'TV Şovları'}</button>
+                            <button className={upcoming === 2 ? 'selected' : {}} onClick={() => (setUpcoming(2))}>{languageEnglish === true ? 'Movies' : 'Filmler'}</button>
                             <button className={upcoming === 3 ? 'selected' : {}} onClick={() => (setUpcoming(3))}>Anime</button>
 
                         </div>
@@ -78,9 +79,9 @@ export default function Home() {
 
                     <div>
 
-                        <h5>OUR SERVICES</h5>
+                        <h5>{languageEnglish === true ? 'OUR SERVICES' : 'HIZMETLERIMIZ'}</h5>
 
-                        <h1>Download Your Shows Watch Offline.</h1>
+                        <h1>{languageEnglish === true ? 'Download Your Shows Watch Offline.' : 'Programlarınızı İndirin Çevrimdışı İzleyin.'}</h1>
 
                         <p>Lorem ipsum dolor sit amet, consecetur adipiscing elseddo eiusmod tempor.There are many variations of passages of lorem Ipsum available, but the majority have suffered alteration in some injected humour.</p>
 
@@ -90,7 +91,7 @@ export default function Home() {
                                 <p><i class="fa-solid fa-tv"></i></p>
 
                                 <div>
-                                    <h3>Enjoy on Your TV.</h3>
+                                    <h3>{languageEnglish === true ? 'Enjoy on Your TV.' : "TV'nizde keyfini çıkarın."}</h3>
                                     <p>Lorem ipsum dolor sit amet, consecetur adipiscing elit, sed do eiusmod tempor.</p>
                                 </div>
 
@@ -100,7 +101,7 @@ export default function Home() {
                                 <p><i class="fa-solid fa-video"></i></p>
 
                                 <div>
-                                    <h3>Watch Everywhere.</h3>
+                                    <h3>{languageEnglish === true ? 'Watch Everywhere.' : "Her Yerde İzle."}</h3>
                                     <p>Lorem ipsum dolor sit amet, consecetur adipiscing elit, sed do eiusmod tempor.</p>
                                 </div>
 
@@ -118,13 +119,13 @@ export default function Home() {
 
                 <div className="container">
 
-                    <h1>Top Rated Movies</h1>
+                    <h1>{languageEnglish === true ? 'Top Rated Movies' : 'En Fazla Beğenilen Filmler'}</h1>
 
                     <header>
-                        <button style={topRated === 1 ? {color: '#E4D804'} : {}} onClick={() => (setTopRated(1))}>TV SHOWS</button>
-                        <button style={topRated === 2 ? {color: '#E4D804'} : {}} onClick={() => (setTopRated(2))}>MOVIES</button>
-                        <button style={topRated === 3 ? {color: '#E4D804'} : {}} onClick={() => (setTopRated(3))}>DOCUMENTARY</button>
-                        <button style={topRated === 4 ? {color: '#E4D804'} : {}} onClick={() => (setTopRated(4))}>SPORTS</button>
+                        <button style={topRated === 1 ? {color: '#E4D804'} : {}} onClick={() => (setTopRated(1))}>{languageEnglish === true ? 'TV SHOWS' : 'TV ŞOVLARI'}</button>
+                        <button style={topRated === 2 ? {color: '#E4D804'} : {}} onClick={() => (setTopRated(2))}>{languageEnglish === true ? 'MOVIES' : 'FILMLER'}</button>
+                        <button style={topRated === 3 ? {color: '#E4D804'} : {}} onClick={() => (setTopRated(3))}>{languageEnglish === true ? 'DOCUMENTARY' : 'BELGESEL'}</button>
+                        <button style={topRated === 4 ? {color: '#E4D804'} : {}} onClick={() => (setTopRated(4))}>{languageEnglish === true ? 'SPORTS' : 'SPOR'}</button>
                     </header>
 
                     {topRated === 1 &&
@@ -436,16 +437,16 @@ export default function Home() {
                 <div className="container">
 
                     <div>
-                        <h1>Live Movie & TV Shows For Friends & Family</h1>
+                        <h1>{languageEnglish === true ? 'Live Movie & TV Shows For Friends & Family' : 'Arkadaşlar ve Aile İçin Canlı Film ve TV Programları'}</h1>
 
                         <p>Lorem ipsum dolor sit amet, consecetur adipiscing elseddo eiusmod There are many variations of passages of lorem Ipsum available, but the majority have suffered alteration.</p>
 
                         <div>
                             <h3>20K+</h3>
-                            <p>Active Customer</p>
+                            <p>{languageEnglish === true ? 'Active Customer' : 'Aktif Kullanıcı'}</p>
                         </div>
 
-                        <button><i class="fa-solid fa-play"></i> WATCH NOW</button>
+                        <button><i class="fa-solid fa-play"></i> {languageEnglish === true ? 'WATCH NOW' : 'ŞİMDİ İZLE'}</button>
                     </div>
 
                     <img src="./img/elements/live.png" alt="" />
@@ -458,7 +459,7 @@ export default function Home() {
 
                 <div className="container">
 
-                    <h1>World Best TV Series</h1>
+                    <h1>{languageEnglish === true ? 'World Best TV Series' : 'Dünyanın En İyi Dizileri'}</h1>
 
                     <div>
                         <div className="card">
@@ -552,19 +553,19 @@ export default function Home() {
                 <div className="container">
 
                     <div>
-                        <h1>TRIAL START FIRST 30 DAYS.</h1>
-                        <p>Enter your email to create or restart your membership.</p>
+                        <h1>{languageEnglish === true ? 'TRIAL START FIRST 30 DAYS.' : '30 GÜNLÜK DENEME SÜRECİNİ BAŞLAT.'}</h1>
+                        <p>{languageEnglish === true ? 'Enter your email to create or restart your membership.' : 'Üyeliğinizi oluşturmak veya yeniden başlatmak için e-posta adresinizi girin.'}</p>
                     </div>
                     <form>
                         <input type="text" placeholder="Enter your email"/>
-                        <button>GET STARTED</button>
+                        <button>{languageEnglish === true ? 'GET STARTED' : 'BAŞLA'}</button>
                     </form>
 
                 </div>
 
             </div>
 
-            <Footer />
+            <Footer languageEnglish={languageEnglish}/>
 
         </div>
     )

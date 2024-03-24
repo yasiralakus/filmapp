@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function Footer() {
+export default function Footer( {languageEnglish} ) {
 
 
 
@@ -16,19 +16,19 @@ export default function Footer() {
 
                         <ul>
                             <li>
-                                <Link>HOME</Link>
+                                <Link>{languageEnglish === true ? 'HOME' : 'ANASAYFA'}</Link>
                             </li>
                             <li>
-                                <Link>MOVIE</Link>
+                                <Link>{languageEnglish === true ? 'MOVIE' : 'FILMLER'}</Link>
                             </li>
                             <li>
-                                <Link>TV SHOW</Link>
+                                <Link>{languageEnglish === true ? 'TV SHOW' : 'TV ŞOVU'}</Link>
                             </li>
                             <li>
-                                <Link>PAGES</Link>
+                                <Link>{languageEnglish === true ? 'PAGES' : 'SAYFALAR'}</Link>
                             </li>
                             <li>
-                                <Link>PRICING</Link>
+                                <Link>{languageEnglish === true ? 'PRICING' : 'FIYATLANDIRMA'}</Link>
                             </li>
                         </ul>
 
@@ -41,16 +41,16 @@ export default function Footer() {
                     <div>
                         <ul>
                             <li>
-                                <Link>FAQ</Link>
+                                <Link>{languageEnglish === true ? 'FAQ' : 'SSS'}</Link>
                             </li>
                             <li>
-                                <Link>HELP CENTER</Link>
+                                <Link>{languageEnglish === true ? 'HELP CENTER' : 'YARDIM MERKEZI'}</Link>
                             </li>
                             <li>
-                                <Link>TERMS OF USE</Link>
+                                <Link>{languageEnglish === true ? 'TERM OF USE' : 'KULLANIM SARTLARI'}</Link>
                             </li>
                             <li>
-                                <Link>PRIVACY</Link>
+                                <Link>{languageEnglish === true ? 'PRIVACY' : 'GIZLILIK'}</Link>
                             </li>
                         </ul>
 
@@ -72,7 +72,10 @@ export default function Footer() {
 
                 <div className="container">
 
-                    <p>Copyright © 2021. All Rights Reserved. Coded by <Link to={'https://www.yasiralakus.com.tr'}>yasiralakus</Link></p>
+                    {languageEnglish === true ? 
+                    <p>Copyright © 2024. All Rights Reserved. Coded by <Link to={'https://www.yasiralakus.com.tr'}>yasiralakus</Link></p>
+                    :
+                    <p>Telif Hakkı © 2024. Tüm Hakları Saklıdır. <Link to={'https://www.yasiralakus.com.tr'}>yasiralakus</Link> tarafından kodlandı.</p>}
 
                     <img src="./img/elements/cards.png" alt="" />
 

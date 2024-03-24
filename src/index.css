@@ -126,6 +126,24 @@ p, h1, h2, h3, h4, h5, h6 {
                 background-color: var(--yellow);
                 color: #000;
             }
+
+            > div {
+                display: flex;
+                align-items: center;
+                border-radius: 50px;
+                gap: 8px;
+                color: #fff;
+                > button {
+                    border: none;
+                    background-color: transparent;
+                    font-size: 14px;
+                    color: #fff;
+                    font-weight: 700;
+                    border-radius: 50px;
+                    line-height: 1;
+                    letter-spacing: 1px;
+                }
+            }
         }
     }
 }
@@ -149,10 +167,11 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .home-hero {
     background: url(../img/home-page/home-hero.jpg);
+    background-size: cover;
     padding: 300px 0;
     > .container {
         > div {
-            width: 700px;
+            width: 750px;
             animation: fade-home-hero ease-in-out 3s;
                 > h3 {
                     color: var(--yellow);
@@ -183,6 +202,9 @@ p, h1, h2, h3, h4, h5, h6 {
                     letter-spacing: 1px;
                     cursor: pointer;
                     transition: all .2s;
+                    display: flex;
+                    gap: 8px;
+                    align-items: center;
                 }
 
                 > button:hover {
