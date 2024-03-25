@@ -15,6 +15,21 @@ export default function HomePageSliderAnime() {
         spaceBetween={50}
         freeMode={true}
         modules={[FreeMode]}
+        breakpoints={{
+            1220: {
+                slidesPerView: 4,
+            },
+            950: {
+                slidesPerView: 3,
+            },
+            580: {
+                slidesPerView: 2,
+            },
+            0: {
+                slidesPerView: 1,
+                spaceBetween: 0
+            },
+          }}
         className="mySwiper fade-in"
       >
         <SwiperSlide>

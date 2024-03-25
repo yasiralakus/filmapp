@@ -19,6 +19,7 @@ body {
     -webkit-font-smoothing: antialiased;
     font-family: 'Poppins', sans-serif;
     position: relative;
+
 }
 
 img, picture, video, canvas, svg {
@@ -77,6 +78,10 @@ p, h1, h2, h3, h4, h5, h6 {
     --yellow: #E4D804
 }
 
+.no-scrolling {
+    overflow: hidden !important;
+}
+
 .active {
     color: var(--yellow) !important;
 }
@@ -84,6 +89,45 @@ p, h1, h2, h3, h4, h5, h6 {
 .container {
     width: 1390px;
     margin: 0 auto;
+}
+
+.mobile-menu {
+    height: 100vh;
+    right: 0;
+    top: 0;
+    position: absolute;
+    background-color: #171D22;
+    z-index: 5;
+    animation: fade-home-hero ease-in-out 0.3s !important;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 25px;
+    gap: 16px;
+    > header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        > button {
+            background-color: transparent;
+            border: none;
+            color: #fff;
+            font-size: 30px;
+        }
+    }
+    > ul {
+        display: flex;
+        flex-direction: column;
+        > li {
+            display: block;
+            border-bottom: 1px solid rgba(255,255,255, 0.1);
+            > a {
+                color: #fff;
+                display: block;
+                padding: 16px 0;
+            }
+        }
+    }
 }
 
 /* HOME START*/
@@ -98,6 +142,16 @@ p, h1, h2, h3, h4, h5, h6 {
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        > button {
+            background-color: transparent;
+            border: none;
+            color: #fff;
+            font-size: 30px;
+            transition: all .3s;
+            cursor: pointer;
+            display: none;
+        }
 
         > div {
             display: flex;
@@ -168,7 +222,7 @@ p, h1, h2, h3, h4, h5, h6 {
 .home-hero {
     background: url(../img/home-page/home-hero.jpg);
     background-size: cover;
-    background-position: right;
+    background-position: center;
     background-repeat: no-repeat;
     padding: 300px 0;
     > .container {
@@ -1193,6 +1247,9 @@ p, h1, h2, h3, h4, h5, h6 {
             > div {
                 display: none;
             }
+            > button {
+                display: block !important;
+            }
         }
     }
 
@@ -1316,6 +1373,10 @@ p, h1, h2, h3, h4, h5, h6 {
                 }
             }
         }
+    }
+
+    .card {
+        margin-right: 20px;
     }
 
     .home-our-services {
