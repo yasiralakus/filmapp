@@ -76,8 +76,6 @@ export default function Home() {
 
                     <div>
 
-                        <h5>OUR SERVICES</h5>
-
                         <h1>Download Your Shows Watch Offline.</h1>
 
                         <p>Lorem ipsum dolor sit amet, consecetur adipiscing elseddo eiusmod tempor.There are many variations of passages of lorem Ipsum available, but the majority have suffered alteration in some injected humour.</p>

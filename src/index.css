@@ -82,7 +82,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .container {
-    width: 1420px;
+    width: 1390px;
     margin: 0 auto;
 }
 
@@ -168,6 +168,8 @@ p, h1, h2, h3, h4, h5, h6 {
 .home-hero {
     background: url(../img/home-page/home-hero.jpg);
     background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
     padding: 300px 0;
     > .container {
         > div {
@@ -349,10 +351,12 @@ p, h1, h2, h3, h4, h5, h6 {
     background-size: cover;
     > .container {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         > div {
             display: flex;
             flex-direction: column;
+            justify-content: center;
             gap: 36px;
             width: 630px;
             > h5 {
@@ -442,6 +446,8 @@ p, h1, h2, h3, h4, h5, h6 {
         }
         > header {
             display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 15px;
             > button {
                 padding: 17px 35px;
@@ -472,6 +478,9 @@ p, h1, h2, h3, h4, h5, h6 {
     > .container {
         display: flex;
         gap: 120px;
+        > img {
+            width: 100%;
+        }
         > div {
             display: flex;
             flex-direction: column;
@@ -582,6 +591,7 @@ p, h1, h2, h3, h4, h5, h6 {
                 letter-spacing: 1px;
                 border: 2px solid transparent;
                 transition: all .2s;
+                white-space: nowrap;
             }
             > button:hover {
                 background-color: var(--yellow);
@@ -607,6 +617,8 @@ p, h1, h2, h3, h4, h5, h6 {
             > ul {
                 display: flex;
                 align-items: center;
+                flex-wrap: wrap;
+                justify-content: center;
                 gap: 40px;
                 > li {
                     > a {
@@ -1068,3 +1080,264 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 /* CONTACT END */
+
+@media (width < 1500px) {
+
+    .container {
+        width: 1300px;
+        padding: 0 20px;
+    }
+
+    .header {
+        left: 0;
+        width: 100%;
+    }
+
+    .home-hero {
+        padding: 200px 0;
+    }
+    
+}
+
+@media (width < 1300px) {
+    .container {
+        width: 100%;
+    }
+
+    .home-live-movie {
+        > .container {
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+            > div {
+                width: 500px;
+            }
+        }   
+    }
+}
+
+@media (width < 1220px) {
+    .container {
+        width: 930px;
+    }
+
+    .home-hero {
+        > .container {
+            > div {
+                width: 610px;
+                > h3 {
+                    font-size: 24px;
+                }
+                > h1 {
+                    font-size: 42px;
+                }
+            }
+        }
+    }
+
+    .home-our-services {
+        > .container {
+            justify-content: center;
+            gap: 32px;
+        }
+    }
+
+    .home-top-rated {
+        >.container {
+            > div {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    }
+
+    .home-world-best {
+        >.container {
+            > div {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    }
+
+    .home-trial {
+        >.container {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            text-align: center;
+        }
+    }
+
+    .footer-top {
+        > .container {
+            gap: 16px;
+            > div {
+                flex-direction: column;
+                gap: 16px;
+            }
+        }
+    }
+
+    .footer-bottom {
+        > .container {
+            flex-direction: column;
+            gap: 16px;
+        }
+    }
+}
+
+@media (width < 1000px) {
+
+    .header {
+        > .container {
+            > div {
+                display: none;
+            }
+        }
+    }
+
+    .nav {
+        display: none;
+    }
+}
+
+@media (width < 950px) {
+    .container {
+        width: 690px !important;
+    }
+
+    .upcoming-movies {
+        >.container {
+            > header {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 32px;
+            }
+        }
+    }
+    
+}
+
+@media (width < 770px) {
+
+    .container {
+        width: 510px !important;
+    }
+
+    .home-hero {
+        padding: 160px 0;
+        > .container {
+            > div {
+                width: 100%;
+            }
+        }
+    }
+
+    .home-live-movie {
+        > .container {
+            > div {
+                width: 100%;
+            }
+        }
+    }
+
+    .home-trial {
+        > .container {
+            > form {
+                flex-direction: column;
+                align-items: center;
+                background-color: transparent;
+                box-shadow: none;
+                padding: 0;
+                gap: 16px;
+                width: 100% !important;
+                > input {
+                    min-width: 100% !important;
+                    padding: 8px;
+                }
+            }
+        }
+    }
+    
+}
+
+@media (width < 580px) {
+
+    .container {
+        width: 100% !important;
+    }
+
+    .home-hero {
+        > .container {
+            > div {
+                > h1 {
+                    font-size: 32px;
+                }
+                > div {
+                    flex-wrap: wrap;
+                    gap: 24px;
+                }
+            }
+        }
+    }
+
+    .footer-top {
+        > .container {
+            > div {
+                > ul {
+                    gap: 16px 32px;
+                }
+            }
+        }
+    }
+
+    .home-world-best, .home-top-rated {
+        > .container {
+            > div {
+                grid-template-columns: 1fr;
+            }
+            > h1 {
+                font-size: 32px;
+                text-align: center;
+            }
+        }
+    }
+
+    .upcoming-movies {
+        > .container {
+            > header {
+                > div {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+                > h1 {
+                    font-size: 32px;
+                }
+            }
+        }
+    }
+
+    .home-our-services {
+        > .container {
+            > div {
+                > h1 {
+                    font-size: 32px;
+                }
+                > div {
+                    > div {
+                        flex-direction: column;
+                        align-items: start;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-bottom {
+        > .container {
+            text-align: center;
+        }
+    }
+    
+}
