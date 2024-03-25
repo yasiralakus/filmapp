@@ -5,6 +5,19 @@ export default function Footer( {languageEnglish} ) {
 
 
     return (
+        <>
+        <div className="home-trial">
+            <div className="container">
+                <div>
+                    <h1>TRIAL START FIRST 30 DAYS</h1>
+                    <p>Enter your email to create or restart your membership.</p>
+                </div>
+                <form>
+                    <input type="text" placeholder="Enter your email"/>
+                    <button>GET STARTED</button>
+                </form>
+            </div>
+        </div>
         <footer className="footer">
 
             <div className="footer-top">
@@ -16,19 +29,19 @@ export default function Footer( {languageEnglish} ) {
 
                         <ul>
                             <li>
-                                <Link>{languageEnglish === true ? 'HOME' : 'ANASAYFA'}</Link>
+                                <Link to={'/'}>HOME</Link>
                             </li>
                             <li>
-                                <Link>{languageEnglish === true ? 'MOVIE' : 'FILMLER'}</Link>
+                                <Link to={'/movie'}>MOVIE</Link>
                             </li>
                             <li>
-                                <Link>{languageEnglish === true ? 'TV SHOW' : 'TV ŞOVU'}</Link>
+                                <Link to={'/tvshow'}>TV SHOW</Link>
                             </li>
                             <li>
-                                <Link>{languageEnglish === true ? 'PAGES' : 'SAYFALAR'}</Link>
+                                <Link to={'/pricing'}>PRICING</Link>
                             </li>
                             <li>
-                                <Link>{languageEnglish === true ? 'PRICING' : 'FIYATLANDIRMA'}</Link>
+                                <Link to={'/contact'}>CONTACT</Link>
                             </li>
                         </ul>
 
@@ -41,16 +54,16 @@ export default function Footer( {languageEnglish} ) {
                     <div>
                         <ul>
                             <li>
-                                <Link>{languageEnglish === true ? 'FAQ' : 'SSS'}</Link>
+                                <Link>FAQ</Link>
                             </li>
                             <li>
-                                <Link>{languageEnglish === true ? 'HELP CENTER' : 'YARDIM MERKEZI'}</Link>
+                                <Link>HELP CENTER</Link>
                             </li>
                             <li>
-                                <Link>{languageEnglish === true ? 'TERM OF USE' : 'KULLANIM SARTLARI'}</Link>
+                                <Link>TERM OF USE</Link>
                             </li>
                             <li>
-                                <Link>{languageEnglish === true ? 'PRIVACY' : 'GIZLILIK'}</Link>
+                                <Link>PRIVACY</Link>
                             </li>
                         </ul>
 
@@ -72,10 +85,7 @@ export default function Footer( {languageEnglish} ) {
 
                 <div className="container">
 
-                    {languageEnglish === true ? 
-                    <p>Copyright © 2024. All Rights Reserved. Coded by <Link to={'https://www.yasiralakus.com.tr'}>yasiralakus</Link></p>
-                    :
-                    <p>Telif Hakkı © 2024. Tüm Hakları Saklıdır. <Link to={'https://www.yasiralakus.com.tr'}>yasiralakus</Link> tarafından kodlandı.</p>}
+                <p>Copyright © 2024. All Rights Reserved. Coded by <Link to={'https://www.yasiralakus.com.tr'}>yasiralakus</Link></p>
 
                     <img src="./img/elements/cards.png" alt="" />
 
@@ -86,5 +96,6 @@ export default function Footer( {languageEnglish} ) {
 
 
         </footer>
+        </>
     )
 }
