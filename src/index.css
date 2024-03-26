@@ -807,6 +807,7 @@ p, h1, h2, h3, h4, h5, h6 {
     padding: 270px 0;
     background: url(../img/elements/top-bgg.jpg);
     background-size: cover;
+    background-position: center;
     > .container {
         display: flex;
         align-items: center;
@@ -900,6 +901,7 @@ p, h1, h2, h3, h4, h5, h6 {
             display: flex;
             gap: 32px;
             flex-wrap: wrap;
+            justify-content: center;
         }
     }
 }
@@ -1004,6 +1006,7 @@ p, h1, h2, h3, h4, h5, h6 {
     padding: 270px 0;
     background: url(../img/elements/top-bgg.jpg);
     background-size: cover;
+    background-position: center;
     > .container {
         display: flex;
         align-items: center;
@@ -1025,13 +1028,15 @@ p, h1, h2, h3, h4, h5, h6 {
     background: url(../img/elements/top-rated-bg.jpg);
     > .container {
         display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
         gap: 32px;
         padding: 0 60px;
     }
 }
 
 .contact-left {
-    min-width: 60%;
+    width: 760px !important;
     > h1 {
         font-size: 20px;
         font-weight: 600;
@@ -1088,7 +1093,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .contact-right {
-    width: 100%;
+    width: 420px;
     > h1 {
         font-size: 20px;
         font-weight: 600;
@@ -1222,6 +1227,43 @@ p, h1, h2, h3, h4, h5, h6 {
         }
     }
 
+    .contact {
+        > .container {
+            padding: 15px;
+            gap: 64px;
+
+            > div {
+                width: 100% !important;
+            }
+        }
+    }
+
+    .contact-left {
+        > h1 {
+            margin-bottom: 16px;
+        }
+        > form {
+            padding: 15px;
+            & input,textarea {
+                padding: 14px;
+            }
+        }
+    }
+
+    .contact-right {
+        > h1 {
+            margin-bottom: 16px;
+        }
+        > div {
+            padding: 15px;
+            > p {
+                font-size: 12px !important;
+            }
+        }
+
+        
+    }
+
     .footer-top {
         > .container {
             gap: 16px;
@@ -1229,6 +1271,7 @@ p, h1, h2, h3, h4, h5, h6 {
                 flex-direction: column;
                 gap: 16px;
             }
+            
         }
     }
 
@@ -1254,6 +1297,14 @@ p, h1, h2, h3, h4, h5, h6 {
         }
     }
 
+    .page-top-hero {
+        > .container {
+            > h1 {
+                font-size: 48px;
+            }
+        }
+    }
+
     .nav {
         display: none;
     }
@@ -1271,6 +1322,38 @@ p, h1, h2, h3, h4, h5, h6 {
                 align-items: center;
                 justify-content: center;
                 gap: 32px;
+            }
+        }
+    }
+
+    .movie-new-release {
+        > .container {
+            > header {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 16px;
+            }
+            > main {
+                > div {
+                    grid-template-columns: 1fr 1fr;
+                }
+            }
+        }
+    }
+
+    .tvshow-new-tvshow {
+        > .container {
+            > header {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 16px;
+            }
+            > main {
+                > div {
+                    grid-template-columns: 1fr 1fr;
+                }
             }
         }
     }
@@ -1324,6 +1407,76 @@ p, h1, h2, h3, h4, h5, h6 {
 
     .container {
         width: 100% !important;
+    }
+
+    .page-top-hero {
+        > .container {
+            > h1 {
+                font-size: 38px;
+            }
+        }
+    }
+
+    .pricing-plans {
+        > .container {
+            > h1 {
+                font-size: 32px !important;
+                text-align: center;
+            }
+        }
+    }
+
+    .pricing-plan {
+        width: 300px;
+        padding: 20px 30px;
+    }
+
+    .movie-new-release {
+        > .container {
+            > header {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 32px;
+                > h1 {
+                    font-size: 32px;
+                    text-align: center;
+                }
+                > div {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+            }
+            > main {
+                > div {
+                    grid-template-columns: 1fr;
+                }
+            }
+        }
+    }
+
+    .tvshow-new-tvshow {
+        > .container {
+            > header {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 32px;
+                > h1 {
+                    font-size: 32px;
+                    text-align: center;
+                }
+                > div {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+            }
+            > main {
+                > div {
+                    grid-template-columns: 1fr;
+                }
+            }
+        }
     }
 
     .home-hero {
